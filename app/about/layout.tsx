@@ -8,8 +8,6 @@ interface LayoutProps {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <>
-      <Partytown debug forward={["dataLayer.push"]} />
-
       <Script
         id="ga_dataLayer2"
         type="text/partytown"
