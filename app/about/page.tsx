@@ -27,8 +27,17 @@ export default function Home() {
   return (
     <main>
       <Script
+        async
+        id="ga"
+        src="https://www.googletagmanager.com/gtag/js?id=G-57JLVPDLMS"
+        strategy="lazyOnload"
+        type="text/partytown"
+      />
+
+      <Script
         id="ga_dataLayer3"
         type="text/partytown"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html:
             "function gtag(){dataLayer.push(arguments);} gtag('event', 'screen_view', { 'app_name': 'Sara XD', 'screen_name': 'Home' });console.info('GTAG GONE!');",
