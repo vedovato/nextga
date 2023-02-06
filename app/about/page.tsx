@@ -27,11 +27,11 @@ export default function Home() {
   return (
     <main>
       <Script
-        id="ga_dataLayer2"
+        id="ga_dataLayer3"
         type="text/partytown"
         dangerouslySetInnerHTML={{
           __html:
-            "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('event', 'screen_view', { 'app_name': 'Sara XD', 'screen_name': 'Home' });console.info('GTAG GONE!');",
+            "function gtag(){dataLayer.push(arguments);} gtag('event', 'screen_view', { 'app_name': 'Sara XD', 'screen_name': 'Home' });console.info('GTAG GONE!');",
         }}
       />
 
