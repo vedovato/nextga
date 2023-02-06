@@ -33,9 +33,10 @@ export default function Home() {
       <Script
         id="ga_dataLayer2"
         type="text/partytown"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html:
-            "gtag('event', 'screen_view', { 'app_name': 'myAppName', 'screen_name': 'Home' });",
+            "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('event', 'screen_view', { 'app_name': 'myAppName', 'screen_name': 'Home' });",
         }}
       />
     </main>
