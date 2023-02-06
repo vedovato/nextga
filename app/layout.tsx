@@ -13,7 +13,11 @@ export default function RootLayout({ children }: LayoutProps) {
         <Analytics />
       </head>
 
-      <body>{children}</body>
+      <body>
+        root
+        <br />
+        {children}
+      </body>
     </html>
   );
 }
