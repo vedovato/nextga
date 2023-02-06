@@ -8,7 +8,7 @@ export default function Home() {
     if (typeof window !== "undefined") {
       console.info("heehee");
       // @ts-ignore
-      window.dataLayer.push("event_xxx", "page_view", {
+      window.dataLayer.push("event_xxx", "page_view_xablau", {
         page_title: "HEE HEE TESTE",
         page_location: window.location,
         page_path: window.location.pathname,
