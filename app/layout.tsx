@@ -1,18 +1,29 @@
-import './globals.css'
+import { Partytown } from "@builder.io/partytown/react";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
+      <head>
+        <Partytown debug={true} forward={["dataLayer.push"]} />
+
+        <script
+          src="https://www.googletagmanager.com/gtag/js?id=G-57JLVPDLMS"
+          type="text/partytown"
+        />
+
+        <script
+          type="text/partytown"
+          dangerouslySetInnerHTML={{
+            __html:
+              "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-57JLVPDLMS');",
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
-  )
+  );
 }
