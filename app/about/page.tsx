@@ -10,7 +10,7 @@ export default function Home() {
       // @ts-ignore
       window.dataLayer.push("event_xxx", "page_view_xablau", {
         page_title: "HEE HEE TESTE",
-        page_location: window.location,
+        page_location: window.location.href,
         page_path: window.location.pathname,
         send_to: "G-57JLVPDLMS",
       });
