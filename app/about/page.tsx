@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Script from "next/script";
 
 export default function Home() {
   // useEffect(() => {
@@ -25,6 +26,15 @@ export default function Home() {
 
   return (
     <main>
+      <Script
+        id="ga_dataLayer2"
+        type="text/partytown"
+        dangerouslySetInnerHTML={{
+          __html:
+            "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('event', 'screen_view', { 'app_name': 'Sara XD', 'screen_name': 'Home' });console.info('GTAG GONE!');",
+        }}
+      />
+
       <h1>About page</h1>
       <Link href="/">Voltar</Link>
     </main>
