@@ -8,11 +8,18 @@ export default function Home() {
     if (typeof window !== "undefined") {
       console.info("heehee");
       // @ts-ignore
-      window.dataLayer.push("event_xxx", "page_view_xablau", {
+      window.dataLayer.push({
+        event: "page_view_xablau",
         page_title: "HEE HEE TESTE",
         page_location: window.location.href,
         page_path: window.location.pathname,
         send_to: "G-57JLVPDLMS",
+      });
+
+      // @ts-ignore
+      window.dataLayer.push("event", "screen_view", {
+        app_name: "myAppName",
+        screen_name: "Home",
       });
     }
   }, []);
