@@ -1,8 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
 import Link from "next/link";
-import Script from "next/script";
 
 export default function Home() {
   // useEffect(() => {
@@ -29,16 +27,6 @@ export default function Home() {
     <main>
       <h1>About page</h1>
       <Link href="/">Voltar</Link>
-
-      <Script
-        id="ga_dataLayer2"
-        type="text/partytown"
-        strategy="lazyOnload"
-        dangerouslySetInnerHTML={{
-          __html:
-            "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('event', 'screen_view', { 'app_name': 'myAppName', 'screen_name': 'Home' });",
-        }}
-      />
     </main>
   );
 }
