@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import Script from "next/script";
+import Link from 'next/link';
+// import Script from 'next/script';
 
 export default function Home() {
   // useEffect(() => {
@@ -26,23 +26,23 @@ export default function Home() {
 
   return (
     <main>
-      <Script
+      {/* <Script
         async
         id="ga"
         src="https://www.googletagmanager.com/gtag/js?id=G-57JLVPDLMS"
         strategy="lazyOnload"
         type="text/partytown"
-      />
+      /> */}
 
-      <Script
+      {/* <Script
         id="ga_dataLayer3"
         type="text/partytown"
         strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html:
-            "function gtag(){dataLayer.push(arguments);} gtag('event', 'screen_view', { 'app_name': 'Sara XD', 'screen_name': 'Home' });console.info('GTAG GONE!');",
+            "function gtag(){dataLayer.push(arguments)}; console.info('GTAG GONE!');",
         }}
-      />
+      /> */}
 
       <h1>About page</h1>
       <Link href="/">Voltar</Link>
