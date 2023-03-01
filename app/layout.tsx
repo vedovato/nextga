@@ -19,7 +19,7 @@ export default function RootLayout({ children }: LayoutProps) {
         <Analytics /> */}
       </head>
 
-      <GoogleAnalytics trackPageViews />
+      <GoogleAnalytics trackPageViews strategy="lazyOnload" />
       <body>{children}</body>
     </html>
   );
